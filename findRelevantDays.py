@@ -1,4 +1,3 @@
-
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.globals import set_debug
@@ -15,36 +14,38 @@ from typing import List, Optional
 
 from langchain_core.pydantic_v1 import BaseModel, Field
 
+
 class RelevantDay(BaseModel):
     """opisuje pojedynczy dzień/święto"""
 
-    name: str = Field(..., description="nazwa święta")
-    description: Optional[str] = Field(..., description="krótki opis święta")
+    name: str = Field(..., description="nazwa ochodzonego dnia")
+    description: Optional[str] = Field(..., description="krótki opis")
 
 
-class RelevantDaysResponse(BaseModel):
+class RelevantDays(BaseModel):
     """Zwraca listę dni/świąt w kalendarzu"""
 
-    days: List[RelevantDay] = Field([], description="lista znalezionych świąt")
+    days: List[RelevantDay] = Field([], description="lista dni")
 
 
-model = ChatOpenAI(model="gpt-4o")
-
+model = ChatOpenAI(model="gpt-4o", temperature=0)
 
 prompt = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            "Jesteś pomocnym asystentem. Znasz wszystkie dni w kalendarzu i chętnie się dzielisz informacjami na ich temat",
+            "Jesteś pomocnym asystentem. Znasz wszystkie dni w kalendarzu i chętnie się dzielisz informacjami na ich temat. "
+            "Zawsze odpowiadasz w języku polskim",
         ),
         ("human", "{query}"),
     ]
 )
 
-chain = prompt | model.with_structured_output(RelevantDaysResponse)
+chain = prompt | model.with_structured_output(RelevantDays)
 
-print(chain.invoke({"query":" Chciałbym wiedzieć kiedy w kalendarzu przypadają dni związane ze zdrowiem, szczególnie psychicznym i "
-                    "wszelkimi tematami związanymi z psychologią lub psychoterapią. Chodzi mi o szystkie dni "
-                    "którch celem jest zwiększanie świadomości, edukacji i wsparcia dla osób zmagających się z różnymi "
-                    "problemami psychicznymi oraz promowania zdrowia psychicznego na całym świecie."}))
-
+print(chain.invoke({
+                       "query": " Chciałbym poznać wszystkie święta w kalendarzu w których to ustanowiono święta związane ze zdrowiem psychicznym,"
+                                " zaburzeniami psychicznymi, dni upamiętnieniające ofiary które doznały krzywd psychicznych, "
+                                "dni związane z promowaniem zdrowia psychicznego oraz wszelkimi tematami związanymi z psychologią lub rozwojem wewnętrznym."
+                                "Chodzi o dni ustanowione na szczeblu międzynarodowym lub europejskim w miesiącu czerwiec. Chcę jak najpełniejszą listę - minimum 7 dni"
+                       }))
