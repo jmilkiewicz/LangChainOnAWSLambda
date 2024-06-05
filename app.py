@@ -1,4 +1,4 @@
-from findRelevantDays2 import findRelevantDays
+from findRelevantDaysFromCalendar import findRelevantDays
 from generateInstagramPost import generateInstagramPost
 
 days = findRelevantDays(10)
