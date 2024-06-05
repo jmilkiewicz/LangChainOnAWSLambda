@@ -79,7 +79,7 @@
         {{#.}}
             <li id="event{{index}}">
                 W dniu {{event.date}} obchodzimy: {{event.name}}
-                <button onclick="sendEvent({{event}},'textarea-event{{index}}','spinner-event{index}}')">Generate Post</button>
+                <button onclick="sendEvent({{event}},'textarea-event{{index}}','spinner-event{{index}}')">Generate Post</button>
                 <div class="spinner" id="spinner-event{{index}}"></div>
                 <textarea id="textarea-event{{index}}" readonly></textarea>
              </li>
