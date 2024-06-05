@@ -30,22 +30,40 @@ class RelevantDays(BaseModel):
 
 model = ChatOpenAI(model="gpt-4o", temperature=0)
 
-prompt = ChatPromptTemplate.from_messages(
-    [
-        (
-            "system",
-            "Jesteś pomocnym asystentem. Znasz wszystkie dni w kalendarzu i chętnie się dzielisz informacjami na ich temat. "
-            "Zawsze odpowiadasz w języku polskim",
-        ),
-        ("human", "{query}"),
-    ]
-)
 
-chain = prompt | model.with_structured_output(RelevantDays)
+def findRelevantDays(month, min=5):
 
-print(chain.invoke({
-                       "query": " Chciałbym poznać wszystkie święta w kalendarzu w których to ustanowiono święta związane ze zdrowiem psychicznym,"
-                                " zaburzeniami psychicznymi, dni upamiętnieniające ofiary które doznały krzywd psychicznych, "
-                                "dni związane z promowaniem zdrowia psychicznego oraz wszelkimi tematami związanymi z psychologią lub rozwojem wewnętrznym."
-                                "Chodzi o dni ustanowione na szczeblu międzynarodowym lub europejskim w miesiącu czerwiec. Chcę jak najpełniejszą listę - minimum 7 dni"
-                       }))
+    def get_month_name(x):
+        months = [
+            "styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec",
+            "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"
+        ]
+        if 1 <= x <= 12:
+            return months[x - 1]
+        else:
+            return "dowolny"
+
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            (
+                "system",
+                "Jesteś pomocnym asystentem. Znasz wszystkie dni w kalendarzu i chętnie się dzielisz informacjami na ich temat. "
+                "Zawsze odpowiadasz w języku polskim",
+            ),
+            ("human",
+             "Chciałbym poznać wszystkie święta w kalendarzu w których to ustanowiono święta związane ze zdrowiem psychicznym,"
+             " zaburzeniami psychicznymi, dni upamiętnieniające ofiary które doznały krzywd psychicznych, "
+             "dni związane z promowaniem zdrowia psychicznego oraz wszelkimi tematami związanymi z psychologią lub rozwojem wewnętrznym."
+             "Chodzi o dni ustanowione na szczeblu międzynarodowym lub europejskim w miesiącu {month}. Chcę jak najpełniejszą listę dni w danym miesiącu - minimum {min} dni a max 10 "),
+        ]
+    )
+
+    chain = prompt | model.with_structured_output(RelevantDays)
+
+    return chain.invoke({
+        "month": get_month_name(month),
+        "min": min
+    })
+
+
+print(findRelevantDays(1, 6))
