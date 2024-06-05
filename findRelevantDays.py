@@ -63,7 +63,7 @@ def findRelevantDays(month, min=5):
     return chain.invoke({
         "month": get_month_name(month),
         "min": min
-    })
+    }).days
 
 
 print(findRelevantDays(1, 6))
