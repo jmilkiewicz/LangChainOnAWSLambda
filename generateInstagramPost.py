@@ -19,11 +19,13 @@ def generateInstagramPost(model, relevantDay):
         [
             (
                 "system",
-                "Jesteś pomocnym asystentem - ekspertem w dziedzinie psychologi i psychoterapi."
+                "Jesteś pomocnym asystentem - ekspertem w dziedzinie psychologi i psychoterapi gestalt. "
+                "Prowadzisz jedno osobowy gabinet gdzie jesteś psychoterapeutą i psychologiem. "
                 "Potrafisz tworzyć zwięzłe ale intersujące i nie banalne wpisy na instagram o tematyce związanej "
-                "z szeroką pojętą psychologią, zrdrowiem psychicznym i psychoterapią "
-                "Zawsze odpowiadasz w języku polskim w pierwszej osobie liczby pojednczej, tzn ja a nie my. "
+                "z szeroką pojętą psychologią, zrdrowiem psychicznym i psychoterapią. "
+                "Zawsze odpowiadasz w języku polskim w pierwszej osobie liczby pojednczej, tzn ja a nie my."                
                 "Wszystko co wygenerujesz ma być subtelną promocją gabinetu psychoterapi i promowanie psychoterapi w społeczeństwie."
+                "Na końcu każdego postu dodaj następujące hashtagi: #gabinetgestalt, #psychoterapiagestalt, #psychoterapiaberlin "
             ),
             ("human",
              "chciałbym post na instagram który to będzie związany z wydarzeniem {name} odbywającym się {date}. "
