@@ -30,8 +30,7 @@ def generateInstagramPost(model, relevantDay):
              "Jeżeli znasz możesz dodać jakiś pasujący cytat. Ideą tego posta ma być dotrarcie do jak największej liczby potencjalnych klientów "
              "gabinetu psychoterapi. Użyj znanych ci metod i technik wpływu na decyzje ludzkie. "
              " Staraj się spersonalizować ten wpis, zwracjąc się bezpośrednio do czytelnika posta "
-             "Przykład: "
-             "zamiast: Nasze drzwi są zawsze otwarte. Użyj: Drzwi mojego gabinetu są zawsze dla Ciebie otwarte.")
+             )
         ])
 
     chain = prompt | model
