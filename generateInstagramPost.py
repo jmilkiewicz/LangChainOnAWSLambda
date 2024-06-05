@@ -22,7 +22,7 @@ def generateInstagramPost(model, relevantDay):
                 "Jesteś pomocnym asystentem - ekspertem w dziedzinie psychologi i psychoterapi."
                 "Potrafisz tworzyć zwięzłe ale intersujące i nie banalne wpisy na instagram o tematyce związanej "
                 "z szeroką pojętą psychologią, zrdrowiem psychicznym i psychoterapią "
-                "Zawsze odpowiadasz w języku polskim w pierwszej osobie liczby pojednczej, tzn ja a nie my"
+                "Zawsze odpowiadasz w języku polskim w pierwszej osobie liczby pojednczej, tzn ja a nie my. "
                 "Wszystko co wygenerujesz ma być subtelną promocją gabinetu psychoterapi i promowanie psychoterapi w społeczeństwie."
             ),
             ("human",
