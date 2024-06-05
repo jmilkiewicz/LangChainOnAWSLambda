@@ -11,10 +11,10 @@ set_debug(True)
 dotenv_path = Path('.env')
 load_dotenv(dotenv_path=dotenv_path)
 
-model = ChatOpenAI(model="gpt-4o", temperature=1)
 
 
-def generateInstagramPost(relevantDay):
+
+def generateInstagramPost(model, relevantDay):
     prompt = ChatPromptTemplate.from_messages(
         [
             (
@@ -37,7 +37,7 @@ def generateInstagramPost(relevantDay):
     chain = prompt | model
 
     return chain.invoke({
-        "name": relevantDay.name,
-        "date": relevantDay.date
+        "name": relevantDay["name"],
+        "date": relevantDay["date"]
     }).content
 

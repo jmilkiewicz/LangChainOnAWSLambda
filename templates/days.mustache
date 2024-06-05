@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event List</title>
+        <style>
+              body {
+                  font-family: Arial, sans-serif;
+                  background-color: #f9f9f9;
+                  margin: 0;
+                  padding: 20px;
+              }
+              ul {
+                  list-style-type: none;
+                  padding: 0;
+              }
+              li {
+                  background-color: #ffffff;
+                  margin: 10px 0;
+                  padding: 20px;
+                  border: 1px solid #ddd;
+                  border-radius: 5px;
+                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              }
+              button {
+                  background-color: #4CAF50;
+                  color: white;
+                  border: none;
+                  padding: 10px 20px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin-top: 10px;
+                  border-radius: 5px;
+                  cursor: pointer;
+              }
+              button:hover {
+                  background-color: #45a049;
+              }
+              textarea {
+                  width: 100%;
+                  margin-top: 10px;
+                  padding: 10px;
+                  border: 1px solid #ddd;
+                  border-radius: 5px;
+                  resize: none;
+                  overflow: hidden;
+                  min-height: 60px;
+                  font-family: Arial, sans-serif;
+              }
+          </style>
+</head>
+<body>
+    <ul>
+        {{#.}}
+        <li id="event{{index}}">
+            W dniu {{event.date}} obchodzimy: {{event.name}}
+            <button onclick="sendEvent({{event}},'textarea-event{{index}}')">Send</button>
+             <textarea id="textarea-event{{index}}" readonly></textarea>
+        {{/.}}
+    </ul>
+
+    <script>
+        function sendEvent(event, textareaId) {
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "generatePost", true);
+
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.responseType = 'json';
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    const textareaElement = document.getElementById(textareaId);
+                    if (xhr.status === 200) {
+                        textareaElement.value = xhr.response.post;
+                    } else {
+                        textareaElement.value = "Error: " + xhr.status;
+                    }
+
+                }
+            };
+            const data = JSON.stringify(event);
+            xhr.send(data);
+        }
+
+         function autoResizeTextarea(textarea) {
+                    textarea.style.height = 'auto';
+                    textarea.style.height = textarea.scrollHeight + 'px';
+                }
+
+         document.addEventListener("DOMContentLoaded", function() {
+                     document.querySelectorAll("textarea").forEach(autoResizeTextarea);
+                 });
+
+    </script>
+</body>
+</html>

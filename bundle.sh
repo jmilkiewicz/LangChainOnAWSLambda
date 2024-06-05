@@ -10,4 +10,5 @@ pip install -I openai -t dist
 rm -r dist/*.dist-info
 cp *.py dist/
 cp -r calendar dist/
+cp -r templates dist/
 cd dist && zip -r lambda.zip *

@@ -9,14 +9,29 @@ import config
 
 from langchain_core.runnables import ConfigurableField
 from langchain_openai import ChatOpenAI
+import chevron
 
 from findRelevantDaysFromCalendar import findRelevantDays
 
 
+def cleanNullTerms(d):
+    clean = {}
+    for k, v in d.items():
+        if isinstance(v, dict):
+            nested = cleanNullTerms(v)
+            if len(nested.keys()) > 0:
+                clean[k] = nested
+        elif v is not None:
+            clean[k] = v
+    return clean
+
 def handler(event, context):
     print(f"event is {event}")
 
-    month = event.get("queryStringParameters",{}).get("months","")
+    event = cleanNullTerms(event)
+
+
+    month = event.get("queryStringParameters", {}).get("month", "")
 
     print(f"month is {month}")
 
@@ -30,19 +45,21 @@ def handler(event, context):
 
     days = findRelevantDays(model, month)
 
-    dicts = [relevantDay.dict()  for relevantDay in days]
+    dicts = [  {"event": relevantDay.dict()} | {"index":index} for index, relevantDay in enumerate(days)]
 
     return build_response(dicts)
 
 
-def build_response(body):
-    return {
-        "statusCode": 200,
-        "headers": {
-            "Content-Type": "application/json"
-        },
-        "body": json.dumps(body)
-    }
+def build_response(dicts):
+    with open('templates/days.mustache', 'r') as f:
+        body = chevron.render(f, dicts)
+        return {
+            "statusCode": 200,
+            "headers": {
+                'Content-Type': 'text/html',
+            },
+            "body": body
+        }
 
 
 def get_api_key():
@@ -50,8 +67,8 @@ def get_api_key():
 
     headers = {"X-Aws-Parameters-Secrets-Token": os.environ.get('AWS_SESSION_TOKEN')}
     secrets_extension_endpoint = "http://localhost:2773" + \
-    "/secretsmanager/get?secretId=" + \
-    config.config.API_KEYS_SECRET_NAME
+                                 "/secretsmanager/get?secretId=" + \
+                                 config.config.API_KEYS_SECRET_NAME
 
     r = requests.get(secrets_extension_endpoint, headers=headers)
     secret = json.loads(json.loads(r.text)["SecretString"])
