@@ -92,7 +92,7 @@
             const spinnerElement = document.getElementById(spinnerId);
             spinnerElement.classList.add('show');
 
-            xhr.open("POST", "your-server-endpoint-url", true);
+            xhr.open("POST", "generatePost", true);
             xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
