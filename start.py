@@ -22,7 +22,7 @@ with open('templates/days.mustache', 'r') as f:
     print(chevron.render(f, dicts))
 
 
-posts = [generateInstagramPost(model, dicts[0]["event"]) for day in days]
+# posts = [generateInstagramPost(model, dicts[0]["event"]) for day in days]
 
 
 

@@ -1,0 +1,9 @@
+langchain_openai
+python-dotenv
+langchain
+langchain_community
+loguru
+langchainhub
+requests
+boto3
+chevron
