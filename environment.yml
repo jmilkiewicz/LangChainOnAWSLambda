@@ -1,0 +1,10 @@
+name: insta-day-post-creator
+channels:
+  - https://conda.anaconda.org/conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+    - -r requirements.txt
+    - streamlit
+    - aws-cdk-lib

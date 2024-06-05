@@ -1,10 +1,11 @@
-from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.globals import set_debug
 from langchain.globals import set_verbose
 from dotenv import load_dotenv
 from pathlib import Path
-from langchain_core.runnables import ConfigurableField
+from datetime import datetime
+
+
 
 set_verbose(True)
 set_debug(True)
@@ -32,16 +33,12 @@ class RelevantDays(BaseModel):
     days: List[RelevantDay] = Field([], description="lista świąt")
 
 
-model = ChatOpenAI(temperature=0.0, model="gpt-4o", ).configurable_fields(
-    temperature=ConfigurableField(
-        id="llm_temperature",
-        name="LLM Temperature",
-        description="The temperature of the LLM",
-    )
-)
+
+def findRelevantDays(model, month):
+    if not month:
+        month = datetime.now().month
 
 
-def findRelevantDays(month):
     def get_days_in(x):
         with open(f'calendar/{x}.json') as json_data:
             d = json.load(json_data)
@@ -70,7 +67,7 @@ def findRelevantDays(month):
     ).partial(format_instructions=parser.get_format_instructions())
 
 
-    chain =  prompt| model.with_config(configurable={"llm_temperature": 0.0}) | parser
+    chain = prompt| model.with_config(configurable={"llm_temperature": 0.0}) | parser
 
     days = chain.invoke({
         "days": get_days_in(month),
