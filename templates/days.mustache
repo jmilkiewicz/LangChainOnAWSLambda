@@ -4,126 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event List</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background-color: #ffffff;
-            margin: 10px 0;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin-top: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        textarea {
-            width: 100%;
-            margin-top: 10px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            resize: none;
-            overflow: hidden;
-            min-height: 60px;
-            font-family: Arial, sans-serif;
-        }
-        .spinner {
-            display: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 40px;
-            height: 40px;
-            margin-top: -20px;
-            margin-left: -20px;
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            border-top: 4px solid #4CAF50;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        .spinner.show {
-            display: block;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+     <style>
+           body {
+               font-family: Arial, sans-serif;
+               background-color: #f9f9f9;
+               margin: 0;
+               padding: 20px;
+           }
+           ul {
+               list-style-type: none;
+               padding: 0;
+           }
+           li {
+               background-color: #ffffff;
+               margin: 10px 0;
+               padding: 20px;
+               border: 1px solid #ddd;
+               border-radius: 5px;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+               position: relative;
+           }
+           button {
+               background-color: #4CAF50;
+               color: white;
+               border: none;
+               padding: 10px 20px;
+               text-align: center;
+               text-decoration: none;
+               display: inline-block;
+               font-size: 16px;
+               margin-top: 10px;
+               border-radius: 5px;
+               cursor: pointer;
+           }
+           button:hover {
+               background-color: #45a049;
+           }
+           textarea {
+               width: 100%;
+               margin-top: 10px;
+               padding: 10px;
+               border: 1px solid #ddd;
+               border-radius: 5px;
+               resize: none;
+               overflow: hidden;
+               min-height: 60px;
+               font-family: Arial, sans-serif;
+           }
+           .spinner {
+               display: none;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               width: 40px;
+               height: 40px;
+               margin-top: -20px;
+               margin-left: -20px;
+               border: 4px solid rgba(0, 0, 0, 0.1);
+               border-top: 4px solid #4CAF50;
+               border-radius: 50%;
+               animation: spin 1s linear infinite;
+           }
+           .spinner.show {
+               display: block;
+           }
+           .chat-history {
+               margin-top: 10px;
+               padding: 10px;
+               border: 1px solid #ddd;
+               border-radius: 5px;
+               background-color: #f1f1f1;
+               max-height: 200px;
+               overflow-y: auto;
+           }
+           .chat-message {
+               margin: 5px 0;
+               padding: 10px;
+               border-radius: 5px;
+           }
+           .chat-message.assistant {
+               background-color: #e0f7fa;
+           }
+           .chat-message.user {
+               background-color: #e0e0e0;
+           }
+           input[type="text"] {
+               width: calc(100% - 20px);
+               padding: 10px;
+               border: 1px solid #ddd;
+               border-radius: 5px;
+               margin-top: 10px;
+           }
+           .hidden {
+               display: none;
+           }
+           @keyframes spin {
+               0% { transform: rotate(0deg); }
+               100% { transform: rotate(360deg); }
+           }
+       </style>
 </head>
 <body>
     <ul>
-        {{#.}}
-            <li id="event{{index}}">
-                W dniu {{event.date}} obchodzimy: {{event.name}}
-                <button onclick="sendEvent({{event}},'textarea-event{{index}}','spinner-event{{index}}')">Generate Post</button>
-                <div class="spinner" id="spinner-event{{index}}"></div>
-                <textarea id="textarea-event{{index}}" readonly></textarea>
-             </li>
-          {{/.}}
+       {{#.}}
+                   <li id="event{{index}}">
+                       W dniu {{event.date}} obchodzimy: {{event.name}}
+
+                       <button onclick="sendEvent({{event}},'chat-history-event{{index}}', 'spinner-event{{index}}', 'threadId-event{{index}}','feedback-event{{index}}', 'tune-button-event{{index}}' )">Generate Post</button>
+                        <div class="spinner" id="spinner-event{{index}}"></div>
+                        <div class="chat-history" id="chat-history-event{{index}}"></div>
+                        <input type="text" id="feedback-event{{index}}" placeholder="Enter your feedback" class="hidden">
+                        <button id="tune-button-event{{index}}" onclick="tunePost('threadId-event{{index}}', 'chat-history-event{{index}}', 'spinner-event{{index}}', 'feedback-event{{index}}')" class="hidden">Tune Post</button>
+                        <input type="hidden" id="threadId-event{{index}}">
+                    </li>
+       {{/.}}
     </ul>
 
     <script>
-        function sendEvent(eventDetails, textareaId, spinnerId) {
+        function sendEvent(eventDetails, chatHistoryId, spinnerId, threadIdInputId, feedbackInputId, tuneButtonId) {
             const xhr = new XMLHttpRequest();
             const spinnerElement = document.getElementById(spinnerId);
+            const threadIdInput = document.getElementById(threadIdInputId);
+            const feedbackInput = document.getElementById(feedbackInputId);
+            const tuneButton = document.getElementById(tuneButtonId);
             spinnerElement.classList.add('show');
 
             xhr.open("POST", "generatePost", true);
             xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
-                    const textareaElement = document.getElementById(textareaId);
+                    const chatHistoryElement = document.getElementById(chatHistoryId);
                     spinnerElement.classList.remove('show');
                     if (xhr.status === 200) {
                         try {
                             const response = JSON.parse(xhr.responseText);
-                            textareaElement.value = response.post;
+                            const messages = response.post.messages.map(msg => `<div class="chat-message assistant">${msg.text}</div>`).join("");
+                            chatHistoryElement.innerHTML = messages;
+                            threadIdInput.value = response.post.threadId; // Save threadId in hidden input field
                         } catch (e) {
-                            textareaElement.value = "Error parsing response";
+                            chatHistoryElement.innerHTML = `<div class="chat-message assistant">Error parsing response</div>`;
                         }
+                         feedbackInput.classList.remove('hidden'); // Show feedback input
+                         tuneButton.classList.remove('hidden');
                     } else {
-                        textareaElement.value = "Error: " + xhr.status;
+                        chatHistoryElement.innerHTML = `<div class="chat-message assistant">Error: ${xhr.status}</div>`;
                     }
-                    autoResizeTextarea(textareaElement);
                 }
             };
             const data = JSON.stringify(eventDetails);
             xhr.send(data);
         }
 
-        function autoResizeTextarea(textarea) {
-            textarea.style.height = 'auto';
-            textarea.style.height = textarea.scrollHeight + 'px';
-        }
+        function tunePost(threadIdInputId, chatHistoryId, spinnerId, feedbackInputId) {
+            const threadId = document.getElementById(threadIdInputId).value;
+            const feedbackText = document.getElementById(feedbackInputId).value.trim();
+            if (!threadId || threadId === "undefined") {
+                alert('No threadId found. Please send the initial request first.');
+                return;
+            }
+            if (!feedbackText) {
+                alert('Please enter your feedback.');
+                return;
+            }
 
-        // Initial call to ensure textareas are sized correctly on load
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelectorAll("textarea").forEach(autoResizeTextarea);
-        });
+            const xhr = new XMLHttpRequest();
+            const spinnerElement = document.getElementById(spinnerId);
+            spinnerElement.classList.add('show');
+
+            const chatHistoryElement = document.getElementById(chatHistoryId);
+            const userMessage = `<div class="chat-message user">${feedbackText}</div>`;
+            chatHistoryElement.innerHTML += userMessage; // Display user feedback in chat history
+            document.getElementById(feedbackInputId).value = ''; // Clear the input field
+
+            xhr.open("POST", "tunePost", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    spinnerElement.classList.remove('show');
+                    if (xhr.status === 200) {
+                        try {
+                        const response = JSON.parse(xhr.responseText);
+                        response.messages.forEach(message => {
+                                const assistantMessage = `<div class="chat-message assistant">${message.text}</div>`;
+                                chatHistoryElement.innerHTML += assistantMessage; // Display assistant response in chat history
+                        });
+                        } catch (e) {
+                            chatHistoryElement.innerHTML += `<div class="chat-message assistant">Error parsing response</div>`;
+                        }
+                    } else {
+                        chatHistoryElement.innerHTML += `<div class="chat-message assistant">Error: ${xhr.status}</div>`;
+                    }
+                }
+            };
+            const data = JSON.stringify({ threadId: threadId, postFeedback: feedbackText });
+            xhr.send(data);
+        }
     </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 import json
-from lllmModelBuilder import buildLLM
+from openai import OpenAI
 from getApiKey import getApiKey
 from generateInstagramPost import generateInstagramPost
 
@@ -21,9 +21,10 @@ def handler(event, context):
     print(f"date is {date}")
     print(f"name is {name}")
 
-    model = buildLLM(key= getApiKey(),temperature=1.0)
+    client = OpenAI(api_key=getApiKey())
 
-    content = generateInstagramPost(model, body)
+    content = generateInstagramPost(client, body)
+
     return build_response(content)
 
 
