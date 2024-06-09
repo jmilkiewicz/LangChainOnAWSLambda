@@ -3,6 +3,7 @@ import chevron
 from findRelevantDaysFromCalendar import findRelevantDays
 from lllmModelBuilder import buildLLM
 from getApiKey import getApiKey
+from datetime import datetime, timedelta
 
 
 def cleanNullTerms(d):
@@ -28,7 +29,7 @@ def handler(event, context):
 
     model = buildLLM(key=getApiKey(), temperature=0.0)
 
-    days = findRelevantDays(model, month)
+    days = findRelevantDays(model, datetime.now(), datetime.now() + timedelta(days=10))
 
     dicts = [{"event": relevantDay.dict()} | {"index": index} for index, relevantDay in enumerate(days)]
 

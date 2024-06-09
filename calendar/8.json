@@ -3,90 +3,105 @@
     "date": "1 sierpnia ",
     "name": [
       "Narodowy Dzień Pamięci Powstania Warszawskiego"
-    ]
+    ],
+    "day": 1
   },
   {
     "date": "2 sierpnia ",
     "name": [
       "Światowy Dzień Pamięci o Zagładzie Romów"
-    ]
+    ],
+    "day": 2
   },
   {
     "date": "6 sierpnia ",
     "name": [
       "Przemienienie Pańskie"
-    ]
+    ],
+    "day": 6
   },
   {
     "date": "9 sierpnia ",
     "name": [
       "Międzynarodowy Dzień Ludności Tubylczej na Świecie"
-    ]
+    ],
+    "day": 9
   },
   {
     "date": "10 sierpnia",
     "name": [
       "Dzień Przewodników i Ratowników Górskich"
-    ]
+    ],
+    "day": 10
   },
   {
     "date": "12 sierpnia",
     "name": [
       "Międzynarodowy Dzień Młodzieży"
-    ]
+    ],
+    "day": 12
   },
   {
     "date": "13 sierpnia",
     "name": [
       "Międzynarodowy Dzień Osób Leworęcznych"
-    ]
+    ],
+    "day": 13
   },
   {
     "date": "14 sierpnia",
     "name": [
       "Dzień Energetyka"
-    ]
+    ],
+    "day": 14
   },
   {
     "date": "15 sierpnia",
     "name": [
       "Święto Wojska Polskiego, Wniebowzięcie Najświętszej Maryi Panny"
-    ]
+    ],
+    "day": 15
   },
   {
     "date": "19 sierpnia",
     "name": [
       "Światowy Dzień Pomocy Humanitarnej"
-    ]
+    ],
+    "day": 19
   },
   {
     "date": "22 sierpnia",
     "name": [
       "Najświętsza Maryja Panna Królowa"
-    ]
+    ],
+    "day": 22
   },
   {
     "date": "23 sierpnia",
     "name": [
       "Międzynarodowy Dzień Pamięci o Handlu Niewolnikami i jego Zniesieniu, Święto Lotnictwa"
-    ]
+    ],
+    "day": 23
   },
   {
     "date": "28 sierpnia",
     "name": [
       "Święto Lotnictwa Polskiego"
-    ]
+    ],
+    "day": 28
   },
   {
     "date": "29 sierpnia",
     "name": [
       "Dzień Straży Gminnej, Międzynarodowy Dzień Sprzeciwu wobec Prób Jądrowych"
-    ]
+    ],
+    "day": 29
   },
   {
     "date": "31 sierpnia",
     "name": [
       "Dzień Solidarności i Wolności"
-    ]
+    ],
+    "day": 31
   }
 ]

@@ -3,114 +3,133 @@
     "date": "1 listopada",
     "name": [
       "Wszystkich Świętych"
-    ]
+    ],
+    "day": 1
   },
   {
     "date": "2 listopada",
     "name": [
       "Dzień zaduszny"
-    ]
+    ],
+    "day": 2
   },
   {
     "date": "3 listopada",
     "name": [
       "Święto Myśliwych"
-    ]
+    ],
+    "day": 3
   },
   {
     "date": "6 listopada",
     "name": [
       "Międzynarodowy Dzień Zapobiegania Wyzyskowi Środowiska Naturalnego podczas Wojen i Konfliktów Zbrojnych"
-    ]
+    ],
+    "day": 6
   },
   {
     "date": "9 listopada",
     "name": [
       "Światowy Dzień Jakości, Międzynarodowy Dzień Walki z Faszyzmem i Antysemityzmem"
-    ]
+    ],
+    "day": 9
   },
   {
     "date": "10 listopada",
     "name": [
       "Światowy Dzień Nauki dla Pokoju i Rozwoju"
-    ]
+    ],
+    "day": 10
   },
   {
     "date": "11 listopada",
     "name": [
       "Narodowe święto Niepodległości"
-    ]
+    ],
+    "day": 11
   },
   {
     "date": "14 listopada",
     "name": [
       "Światowy Dzień Chorych na Cukrzycę"
-    ]
+    ],
+    "day": 14
   },
   {
     "date": "16 listopada",
     "name": [
       "Międzynarodowy Dzień Tolerancji"
-    ]
+    ],
+    "day": 16
   },
   {
     "date": "17 listopada",
     "name": [
       "Międzynarodowy Dzień Studenta, Ogólnopolski Dzień bez Długów, Międzynarodowy Dzień Pamięci Ofiar Wypadków Drogowych"
-    ]
+    ],
+    "day": 17
   },
   {
     "date": "19 listopada",
     "name": [
       "Światowy Dzień Przewlekłej Obturacyjnej Choroby Płuc"
-    ]
+    ],
+    "day": 19
   },
   {
     "date": "20 listopada",
     "name": [
       "Dzień Uprzemysłowienia Afryki"
-    ]
+    ],
+    "day": 20
   },
   {
     "date": "21 listopada",
     "name": [
       "Dzień Pracownika Socjalnego, Dzień Życzliwości, Światowy Dzień Telewizji, Światowy Dzień Rzucania Palenia"
-    ]
+    ],
+    "day": 21
   },
   {
     "date": "22 listopada",
     "name": [
       "22-26 listopada Dni Honorowego Krwiodawstwa Polskiego Czerwonego Krzyża"
-    ]
+    ],
+    "day": 22
   },
   {
     "date": "23 listopada",
     "name": [
       "22-26 listopada Dni Honorowego Krwiodawstwa Polskiego Czerwonego Krzyża"
-    ]
+    ],
+    "day": 23
   },
   {
     "date": "24 listopada",
     "name": [
       "22-26 listopada Dni Honorowego Krwiodawstwa Polskiego Czerwonego Krzyża, Uroczystość Jezusa Chrystusa, Króla Wszechświata"
-    ]
+    ],
+    "day": 24
   },
   {
     "date": "25 listopada",
     "name": [
       "Światowy Dzień Pluszowego Misia, Światowy Dzień bez Futra, 22-26 listopada Dni Honorowego Krwiodawstwa Polskiego Czerwonego Krzyża, Międzynarodowy Dzień Eliminacji Przemocy wobec Kobiet, Dzień Kolejarza"
-    ]
+    ],
+    "day": 25
   },
   {
     "date": "26 listopada",
     "name": [
       "22-26 listopada Dni Honorowego Krwiodawstwa Polskiego Czerwonego Krzyża"
-    ]
+    ],
+    "day": 26
   },
   {
     "date": "29 listopada",
     "name": [
       "Międzynarodowy Dzień Solidarności z Narodem Palestyńskim, Andrzejki , Dzień podchorążego"
-    ]
+    ],
+    "day": 29
   }
 ]

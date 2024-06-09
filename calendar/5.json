@@ -3,156 +3,182 @@
     "date": "1 maja ",
     "name": [
       "Międzynarodowe Święto Pracy"
-    ]
+    ],
+    "day": 1
   },
   {
     "date": "2 maja ",
     "name": [
       "Dzień Flagi Rzeczypospolitej Polskiej"
-    ]
+    ],
+    "day": 2
   },
   {
     "date": "3 maja ",
     "name": [
       "Święto Konstytucji 3 Maja, NMP Królowej Polski, Światowy Dzień Wolności Prasy, Międzynarodowy Dzień Astmy i Alergii"
-    ]
+    ],
+    "day": 3
   },
   {
     "date": "4 maja ",
     "name": [
       "Dzień Hutnika, Dzień Strażaka"
-    ]
+    ],
+    "day": 4
   },
   {
     "date": "5 maja ",
     "name": [
       "Dzień Godności Osoby z Niepełnosprawnością Intelektualną, Dzień Tolerancji, Praw Człowieka i Integracji Europejskiej"
-    ]
+    ],
+    "day": 5
   },
   {
     "date": "8 maja ",
     "name": [
       "Dzień Zwycięstwa, Dzień Bibliotekarza i Bibliotek, Światowy Dzień Czerwonego Krzyża i Czerwonego Półksiężyca"
-    ]
+    ],
+    "day": 8
   },
   {
     "date": "9 maja ",
     "name": [
       "Dzień Europy"
-    ]
+    ],
+    "day": 9
   },
   {
     "date": "12 maja",
     "name": [
       "Światowy Dzień Ptaków Wędrownych, Międzynarodowy Dzień Pielęgniarek i Położnych, Zimnych ogrodników , Wniebowstąpienie"
-    ]
+    ],
+    "day": 12
   },
   {
     "date": "13 maja",
     "name": [
       "Zimnych ogrodników"
-    ]
+    ],
+    "day": 13
   },
   {
     "date": "14 maja",
     "name": [
       "Dzień Farmaceuty, Zimnych ogrodników"
-    ]
+    ],
+    "day": 14
   },
   {
     "date": "15 maja",
     "name": [
       "Święto Polskiej Muzyki i Plastyki, Międzynarodowy Dzień Rodziny"
-    ]
+    ],
+    "day": 15
   },
   {
     "date": "16 maja",
     "name": [
       "Święto Straży Granicznej"
-    ]
+    ],
+    "day": 16
   },
   {
     "date": "17 maja",
     "name": [
       "Światowy Dzień Telekomunikacji"
-    ]
+    ],
+    "day": 17
   },
   {
     "date": "18 maja",
     "name": [
       "Dzień Mostowca, Międzynarodowy Dzień Muzeów"
-    ]
+    ],
+    "day": 18
   },
   {
     "date": "19 maja",
     "name": [
       "Zesłanie Ducha Świętego , Międzynarodowy Dzień Pamięci ofiar AIDS"
-    ]
+    ],
+    "day": 19
   },
   {
     "date": "20 maja",
     "name": [
       "Najświętszej Maryi Panny, Matki Kościoła"
-    ]
+    ],
+    "day": 20
   },
   {
     "date": "21 maja",
     "name": [
       "Światowy Dzień Różnorodności Kulturowej - w Trosce o Dialog i Rozwój, Światowy Dzień Kosmosu"
-    ]
+    ],
+    "day": 21
   },
   {
     "date": "22 maja",
     "name": [
       "Międzynarodowy Dzień Różnorodności Biologicznej, Dzień Praw Zwierząt"
-    ]
+    ],
+    "day": 22
   },
   {
     "date": "23 maja",
     "name": [
       "Światowy Dzień Żółwia, Święto Jezusa Chrystusa, Najwyższego i Wiecznego Kapłana"
-    ]
+    ],
+    "day": 23
   },
   {
     "date": "24 maja",
     "name": [
       "Europejski Dzień Parków Narodowych"
-    ]
+    ],
+    "day": 24
   },
   {
     "date": "25 maja",
     "name": [
       "Dzień Mleka, Dzień Piwowara, Międzynarodowy Dzień Dzieci Zaginionych"
-    ]
+    ],
+    "day": 25
   },
   {
     "date": "26 maja",
     "name": [
       "Dzień Matki, Uroczystość Trójcy Przenajświętszej"
-    ]
+    ],
+    "day": 26
   },
   {
     "date": "27 maja",
     "name": [
       "Dzień Samorządu Terytorialnego"
-    ]
+    ],
+    "day": 27
   },
   {
     "date": "29 maja",
     "name": [
       "Międzynarodowy Dzień Uczestników Misji Pokojowych ONZ, Dzień Działacza Kultury i Drukarza"
-    ]
+    ],
+    "day": 29
   },
   {
     "date": "30 maja",
     "name": [
       "Boże Ciało"
-    ]
+    ],
+    "day": 30
   },
   {
     "date": "31 maja",
     "name": [
       "Światowy Dzień Rozwoju Kulturalnego, Światowy Dzień Bez Papierosa"
-    ]
+    ],
+    "day": 31
   }
 ]

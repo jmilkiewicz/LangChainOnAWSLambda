@@ -3,42 +3,49 @@
     "date": "1 lipca ",
     "name": [
       "Dzień Spółdzielczości, Światowy Dzień Architektury"
-    ]
+    ],
+    "day": 1
   },
   {
     "date": "2 lipca ",
     "name": [
       "Dzień Dziennikarza"
-    ]
+    ],
+    "day": 2
   },
   {
     "date": "11 lipca",
     "name": [
       "Światowy Dzień Ludności"
-    ]
+    ],
+    "day": 11
   },
   {
     "date": "18 lipca",
     "name": [
       "Międzynarodowy Dzień Nelsona Mandeli"
-    ]
+    ],
+    "day": 18
   },
   {
     "date": "24 lipca",
     "name": [
       "Święto Policji"
-    ]
+    ],
+    "day": 24
   },
   {
     "date": "25 lipca",
     "name": [
       "Dzień Bezpiecznego Kierowcy"
-    ]
+    ],
+    "day": 25
   },
   {
     "date": "31 lipca",
     "name": [
       "Dzień Skarbowości"
-    ]
+    ],
+    "day": 31
   }
 ]

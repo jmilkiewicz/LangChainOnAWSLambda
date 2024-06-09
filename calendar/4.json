@@ -3,161 +3,189 @@
     "date": "1 kwietnia ",
     "name": [
       "Poniedziałek Wielkanocny, Prima Aprilis, Międzynarodowy Dzień Ptaków"
-    ]
+    ],
+    "day": 1
   },
   {
     "date": "2 kwietnia ",
     "name": [
       "Światowy Dzień Autyzmu, Międzynarodowy Dzień Książki Dla Dzieci, Wtorek Wielkanocny"
-    ]
+    ],
+    "day": 2
   },
   {
     "date": "3 kwietnia ",
     "name": [
       "Środa Oktawy Wielkanocnej"
-    ]
+    ],
+    "day": 3
   },
   {
     "date": "4 kwietnia ",
     "name": [
       "Międzynarodowy Dzień Wiedzy o Minach i Działań Zapobiegających Minom, Czwartek Oktawy Wielkanocnej"
-    ]
+    ],
+    "day": 4
   },
   {
     "date": "5 kwietnia ",
     "name": [
       "Dzień Leśnika i Drzewiarza , Piątek Oktawy Wielkanocnej"
-    ]
+    ],
+    "day": 5
   },
   {
     "date": "6 kwietnia ",
     "name": [
       "Sobota Oktawy Wielkanocnej"
-    ]
+    ],
+    "day": 6
   },
   {
     "date": "7 kwietnia ",
     "name": [
       "Dzień Pamięci o Holocauście, Światowy Dzień Zdrowia, II Niedziela Wielkanocna, Święto Bożego Miłosierdzia"
-    ]
+    ],
+    "day": 7
   },
   {
     "date": "8 kwietnia ",
     "name": [
       "Międzynarodowy Dzień Romów, Zwiastowanie Pańskie"
-    ]
+    ],
+    "day": 8
   },
   {
     "date": "10 kwietnia",
     "name": [
       "Dzień Służby Zdrowia"
-    ]
+    ],
+    "day": 10
   },
   {
     "date": "11 kwietnia",
     "name": [
       "Ogólnopolski Dzień Walki z Bezrobociem, Światowy Dzień Osób z Chorobą Parkinsona, Dzień Radia"
-    ]
+    ],
+    "day": 11
   },
   {
     "date": "12 kwietnia",
     "name": [
       "Międzynarodowy Dzień Lotnictwa i Kosmonautyki"
-    ]
+    ],
+    "day": 12
   },
   {
     "date": "13 kwietnia",
     "name": [
       "Dzień Pamięci Ofiar Zbrodni Katyńskiej"
-    ]
+    ],
+    "day": 13
   },
   {
     "date": "14 kwietnia",
     "name": [
       "Dzień Ludzi Bezdomnych , Święto Chrztu Polski, III Niedziela Wielkanocna"
-    ]
+    ],
+    "day": 14
   },
   {
     "date": "15 kwietnia",
     "name": [
       "Międzynarodowy Dzień Kombatanta"
-    ]
+    ],
+    "day": 15
   },
   {
     "date": "16 kwietnia",
     "name": [
       "Dzień Sapera"
-    ]
+    ],
+    "day": 16
   },
   {
     "date": "17 kwietnia",
     "name": [
       "Światowy Dzień Chorych na Hemofilię"
-    ]
+    ],
+    "day": 17
   },
   {
     "date": "18 kwietnia",
     "name": [
       "Międzynarodowy Dzień Ochrony Zabytków"
-    ]
+    ],
+    "day": 18
   },
   {
     "date": "20 kwietnia",
     "name": [
       "Międzynarodowy Dzień Wolnej Prasy"
-    ]
+    ],
+    "day": 20
   },
   {
     "date": "21 kwietnia",
     "name": [
       "Niedziela Dobrego Pasterza"
-    ]
+    ],
+    "day": 21
   },
   {
     "date": "22 kwietnia",
     "name": [
       "Międzynarodowy Dzień Ziemi"
-    ]
+    ],
+    "day": 22
   },
   {
     "date": "23 kwietnia",
     "name": [
       "Światowy Dzień Książki i Praw Autorskich"
-    ]
+    ],
+    "day": 23
   },
   {
     "date": "24 kwietnia",
     "name": [
       "Dzień Zwierząt Laboratoryjnych, Międzynarodowy Dzień Solidarności Młodzieży"
-    ]
+    ],
+    "day": 24
   },
   {
     "date": "25 kwietnia",
     "name": [
       "Międzynarodowy Dzień Świadomości Zagrożenia Hałasem, Światowy Dzień Malarii, Międzynarodowy Dzień Sekretarki"
-    ]
+    ],
+    "day": 25
   },
   {
     "date": "26 kwietnia",
     "name": [
       "Światowy Dzień Własności Intelektualnej, Dzień Drogowca i Transportowca"
-    ]
+    ],
+    "day": 26
   },
   {
     "date": "27 kwietnia",
     "name": [
       "Światowy Dzień Grafika"
-    ]
+    ],
+    "day": 27
   },
   {
     "date": "28 kwietnia",
     "name": [
       "Światowy Dzień Bezpieczeństwa i Ochrony Zdrowia w Pracy, V Niedziela Wielkanocna"
-    ]
+    ],
+    "day": 28
   },
   {
     "date": "29 kwietnia",
     "name": [
       "Międzynarodowy Dzień Tańca"
-    ]
-    ]
+    ],
+    "day": 29
+  }
+]

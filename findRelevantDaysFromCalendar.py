@@ -5,11 +5,12 @@ from dotenv import load_dotenv
 from pathlib import Path
 from datetime import datetime
 
-
+from dayCalendar import get_days_in
 
 set_verbose(True)
 set_debug(True)
 import json
+import itertools
 
 dotenv_path = Path('.env')
 load_dotenv(dotenv_path=dotenv_path)
@@ -33,18 +34,8 @@ class RelevantDays(BaseModel):
     days: List[RelevantDay] = Field([], description="lista świąt")
 
 
-
-def findRelevantDays(model, month):
-    if not month:
-        month = datetime.now().month
-
-
-    def get_days_in(x):
-        with open(f'calendar/{x}.json') as json_data:
-            d = json.load(json_data)
-            json_data.close()
-            return d
-
+def findRelevantDays(model, fromDate, toDate):
+    allDays = get_days_in(fromDate, toDate)
 
     parser = PydanticOutputParser(pydantic_object=RelevantDays)
 
@@ -59,19 +50,17 @@ def findRelevantDays(model, month):
              "Z załączonej poniżej listy świąt w formacie JSON chciałbym poznać wszystkie święta związane ze zdrowiem psychicznym,"
              " depresjami, autyzmem, zaburzeniami psychicznymi, uzależnieniami, alkoholizmem, narkomanią, relacjami między ludzkimi , związkami partnerskimi,"
              "seksualnością, dni upamiętnieniające ofiary które doznały krzywd psychicznych, "
-             "dni związane z promowaniem zdrowia psychicznego oraz wszelkimi tematami związanymi z psychologią lub rozwojem wewnętrznym. "             
+             "dni związane z promowaniem zdrowia psychicznego oraz wszelkimi tematami związanymi z psychologią lub rozwojem wewnętrznym. "
              "Opieraj się tylko na poniżej przedstawionej liście świąt."
              "List świąt jest w formacie JSON i posiada atrybut \"date\" który wskazuje na date oraz atrybut \"name\" który ma 1 lub wiele świąt które odbywają się w tym dniu. "
              "{days}"),
         ]
     ).partial(format_instructions=parser.get_format_instructions())
 
-
-    chain = prompt| model.with_config(configurable={"llm_temperature": 0.0}) | parser
+    chain = prompt | model.with_config(configurable={"llm_temperature": 0.0}) | parser
 
     days = chain.invoke({
-        "days": get_days_in(month),
-
+        "days": allDays
     }).days
 
     return days

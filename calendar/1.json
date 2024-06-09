@@ -1,54 +1,67 @@
 [
   {
     "date": "1 stycznia",
-    "name": "Nowy Rok, Światowy Dzień Pokoju, Świętej Bożej Rodzicielki"
+    "name": "Nowy Rok, Światowy Dzień Pokoju, Świętej Bożej Rodzicielki",
+    "day": 1
   },
   {
     "date": "6 stycznia",
-    "name": "Trzech Króli (Objawienie Pańskie), Dzień Filatelisty"
+    "name": "Trzech Króli (Objawienie Pańskie), Dzień Filatelisty",
+    "day": 6
   },
   {
     "date": "8 stycznia",
-    "name": "Dzień Sprzątania Biurka"
+    "name": "Dzień Sprzątania Biurka",
+    "day": 8
   },
   {
     "date": "9 stycznia",
-    "name": "Dzień Ligi Ochrony Przyrody"
+    "name": "Dzień Ligi Ochrony Przyrody",
+    "day": 9
   },
   {
     "date": "11 stycznia",
-    "name": "Dzień Wegetarian"
+    "name": "Dzień Wegetarian",
+    "day": 11
   },
   {
     "date": "17 stycznia",
-    "name": "Dzień Dialogu z Judaizmem (obchodzony przez Kościół Katolicki)"
+    "name": "Dzień Dialogu z Judaizmem (obchodzony przez Kościół Katolicki)",
+    "day": 17
   },
   {
     "date": "21 stycznia",
-    "name": "Dzień Babci"
+    "name": "Dzień Babci",
+    "day": 21
   },
   {
     "date": "22 stycznia",
-    "name": "Dzień Dziadka"
+    "name": "Dzień Dziadka",
+    "day": 22
   },
   {
     "date": "24 stycznia",
-    "name": "Światowy Dzień Środków Masowego Przekazu"
+    "name": "Światowy Dzień Środków Masowego Przekazu",
+    "day": 24
   },
   {
     "date": "25 stycznia",
-    "name": "Dzień Sekretarki i Asystentki"
+    "name": "Dzień Sekretarki i Asystentki",
+    "day": 25
   },
   {
     "date": "26 stycznia",
-    "name": "Światowy Dzień Transplantacji, Światowy Dzień Celnictwa"
+    "name": "Światowy Dzień Transplantacji, Światowy Dzień Celnictwa",
+    "day": 26
   },
   {
     "date": "27 stycznia",
-    "name": "Dzień Pamięci Ofiar Reżimu Hitlerowskiego, Dzień Pamięci Ofiar Nazizmu, Dzień Dialogu z Islamem"
+    "name": "Dzień Pamięci Ofiar Reżimu Hitlerowskiego, Dzień Pamięci Ofiar Nazizmu, Dzień Dialogu z Islamem",
+    "day": 27
   },
   {
     "date": "28 stycznia",
-    "name": "Międzynarodowy Dzień Mobilizacji przeciwko Wojnie Nuklearnej"
+    "name": "Międzynarodowy Dzień Mobilizacji przeciwko Wojnie Nuklearnej",
+    "day": 28
   }
 ]

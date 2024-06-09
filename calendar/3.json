@@ -3,138 +3,161 @@
     "date": "1 marca ",
     "name": [
       "Światowy Dzień Świadomości Autoagresji, Międzynarodowy Dzień Walki Przeciw Zbrojeniom Atomowym, Narodowy Dzień Pamięci Żołnierzy Wyklętych"
-    ]
+    ],
+    "day": 1
   },
   {
     "date": "2 marca ",
     "name": [
       "Międzynarodowy Dzień Obrony Cywilnej"
-    ]
+    ],
+    "day": 2
   },
   {
     "date": "3 marca ",
     "name": [
       "Międzynarodowy Dzień Pisarzy, III Niedziela Wielkiego Postu"
-    ]
+    ],
+    "day": 3
   },
   {
     "date": "5 marca ",
     "name": [
       "Dzień Teściowej"
-    ]
+    ],
+    "day": 5
   },
   {
     "date": "8 marca ",
     "name": [
       "Międzynarodowy Dzień Kobiet"
-    ]
+    ],
+    "day": 8
   },
   {
     "date": "10 marca",
     "name": [
       "Dzień Mężczyzn, IV Niedziela Wielkiego Postu"
-    ]
+    ],
+    "day": 10
   },
   {
     "date": "12 marca",
     "name": [
       "Światowy Dzień Drzemki w Pracy"
-    ]
+    ],
+    "day": 12
   },
   {
     "date": "14 marca",
     "name": [
       "Światowy Dzień Liczby Pi"
-    ]
+    ],
+    "day": 14
   },
   {
     "date": "15 marca",
     "name": [
       "Międzynarodowy Dzień  Konsumenta"
-    ]
+    ],
+    "day": 15
   },
   {
     "date": "17 marca",
     "name": [
       "V Niedziela Wielkiego Postu"
-    ]
+    ],
+    "day": 17
   },
   {
     "date": "19 marca",
     "name": [
       "Uroczystość św. Józefa"
-    ]
+    ],
+    "day": 19
   },
   {
     "date": "20 marca",
     "name": [
       "Początek astronomicznej wiosny, Światowy Dzień Inwalidów i Ludzi Niepełnosprawnych"
-    ]
+    ],
+    "day": 20
   },
   {
     "date": "21 marca",
     "name": [
       "Międzynarodowy Dzień Walki z Dyskryminacją Rasową, Międzynarodowy Dzień Poezji"
-    ]
+    ],
+    "day": 21
   },
   {
     "date": "22 marca",
     "name": [
       "Dzień Ochrony Bałtyku, Światowy Dzień Wody"
-    ]
+    ],
+    "day": 22
   },
   {
     "date": "23 marca",
     "name": [
       "Dzień Przyjaźni Polsko-Węgierskiej, Międzynarodowy Dzień Meteorologii"
-    ]
+    ],
+    "day": 23
   },
   {
     "date": "24 marca",
     "name": [
       "Światowy Dzień Walki z Gruźlicą, Niedziela Palmowa"
-    ]
+    ],
+    "day": 24
   },
   {
     "date": "25 marca",
     "name": [
       "Ogólnopolski Dzień Trzeźwości, Wielki Poniedziałek"
-    ]
+    ],
+    "day": 25
   },
   {
     "date": "26 marca",
     "name": [
       "Wielki Wtorek"
-    ]
+    ],
+    "day": 26
   },
   {
     "date": "27 marca",
     "name": [
       "Międzynarodowy Dzień Teatru, Wielka Środa"
-    ]
+    ],
+    "day": 27
   },
   {
     "date": "28 marca",
     "name": [
       "Wielki Czwartek"
-    ]
+    ],
+    "day": 28
   },
   {
     "date": "29 marca",
     "name": [
       "Wielki Piątek"
-    ]
+    ],
+    "day": 29
   },
   {
     "date": "30 marca",
     "name": [
       "Wielka Sobota"
-    ]
+    ],
+    "day": 30
   },
   {
     "date": "31 marca",
     "name": [
       "Wielkanoc, Zmiana czasu z zimowego na letni"
-    ]
+    ],
+    "day": 31
   }
 ]
