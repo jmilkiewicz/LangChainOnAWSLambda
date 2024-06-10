@@ -19,15 +19,6 @@ AWS_REGION = "eu-west-1"
 
 # The subject line for the email.
 # SUBJECT = "Amazon SES Test (SDK for Python)"
-
-# The email body for recipients with non-HTML email clients.
-BODY_TEXT = ("Amazon SES Test (Python)\r\n"
-             "This email was sent with Amazon SES using the "
-             "AWS SDK for Python (Boto)."
-             )
-
-
-
 # The character encoding for the email.
 CHARSET = "UTF-8"
 
@@ -35,7 +26,7 @@ CHARSET = "UTF-8"
 client = boto3.client('ses', region_name=AWS_REGION)
 
 
-def send_email(subject, body, to):
+def send_email(subject, body_html, body_txt, to):
     try:
         response = client.send_email(
             Destination={
@@ -47,11 +38,11 @@ def send_email(subject, body, to):
                 'Body': {
                     'Html': {
                         'Charset': CHARSET,
-                        'Data': body,
+                        'Data': body_html,
                     },
                     'Text': {
                         'Charset': CHARSET,
-                        'Data': BODY_TEXT,
+                        'Data': body_txt,
                     },
                 },
                 'Subject': {
