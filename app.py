@@ -2,7 +2,8 @@ from aws_cdk import (
     App, Duration, Stack,
     aws_apigateway as apigateway,
     aws_lambda as lambda_,
-    aws_secretsmanager as secretsmanager
+    aws_secretsmanager as secretsmanager,
+    aws_iam as iam
 )
 import config
 
@@ -53,6 +54,25 @@ class LangChainApp(Stack):
                                             timeout=Duration.minutes(5)
                                             )
 
+        notifierLambda = lambda_.Function(self, "IntagramDayPostNotifier",
+                                          runtime=lambda_.Runtime.PYTHON_3_12,
+                                          code=lambda_.Code.from_asset("dist/lambda.zip"),
+                                          handler="notifyOnIncomingDaysLambda.handler",
+                                          layers=[
+                                              lambda_.LayerVersion.from_layer_version_arn(
+                                                  self,
+                                                  "SecretsExtensionLayer4",
+                                                  layer_version_arn=config.config.SECRETS_EXTENSION_ARN
+                                              )
+                                          ],
+                                          timeout=Duration.minutes(5)
+                                          )
+        notifierLambda.add_to_role_policy(iam.PolicyStatement(
+            actions=['ses:SendEmail', 'ses:SendRawEmail'],
+            resources=['*'],
+            effect=iam.Effect.ALLOW,
+        ));
+
         secret = secretsmanager.Secret.from_secret_name_v2(self, 'secret', config.config.API_KEYS_SECRET_NAME)
 
         secret.grant_read(handler_getDays)
@@ -63,6 +83,11 @@ class LangChainApp(Stack):
 
         secret.grant_read(handler_tunePost)
         secret.grant_write(handler_tunePost)
+
+        secret.grant_read(notifierLambda)
+        secret.grant_write(notifierLambda)
+
+
 
         api = apigateway.RestApi(self, "insta-day-posts-api",
                                  rest_api_name="Api for generating Insta posts ",

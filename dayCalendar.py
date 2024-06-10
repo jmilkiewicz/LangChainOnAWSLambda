@@ -16,8 +16,3 @@ def get_days_in(fromDate, toDate):
     else:
         toMonthEvents = readFile(toDate.month)
         return without + list(itertools.takewhile(lambda elem: elem["day"] <= toDate.day, toMonthEvents))
-
-
-
-
-print(get_days_in(datetime.now(), datetime.now() + timedelta(days=30)))

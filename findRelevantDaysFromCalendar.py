@@ -3,14 +3,11 @@ from langchain.globals import set_debug
 from langchain.globals import set_verbose
 from dotenv import load_dotenv
 from pathlib import Path
-from datetime import datetime
 
 from dayCalendar import get_days_in
 
 set_verbose(True)
 set_debug(True)
-import json
-import itertools
 
 dotenv_path = Path('.env')
 load_dotenv(dotenv_path=dotenv_path)
