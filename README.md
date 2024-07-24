@@ -1,5 +1,7 @@
 # Lambda Service
-This package contains the infrastructure and the code to deploy and run a backend service that calls an LLM langchain.
+This is a prototype app that utilizes Langchain and OpenAPI Assistants API to generate instagram post texts related to incoming  
+internationally recognized days related to mental health and all things around psychology or internal development.
+Generated Instagram post text can be adjusted (via like a regular char UI) to meet user needs.
 
 ## Code organization
 ### app.py
