@@ -37,7 +37,4 @@ def generateInstagramPost(openApiClient, params):
         }
         return result
     else:
-
-        print("!!!!!! error !!!!!!!")
-        print(run.status)
         raise Exception(f"!!!!!! error !!!!!!! {run.status}")
