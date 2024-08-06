@@ -22,7 +22,6 @@ class RelevantDay(BaseModel):
 
     date: str = Field(..., description="kiedy przypada dane święto, np 24 stycznia")
     name: str = Field(..., description="nazwa święta np Światowy Dzień Transplantacji ")
-    # description: Optional[str] = Field(..., description="krótki opis")
 
 
 class RelevantDays(BaseModel):

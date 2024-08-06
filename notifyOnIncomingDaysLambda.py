@@ -7,7 +7,6 @@ from notifyOnIncomingDays import doNotify
 
 
 def handler(event, context):
-    print(f"event is {event}")
     model = buildLLM(key=getApiKey(), temperature=0.0)
     doNotify(model, datetime.now(), datetime.now() + timedelta(days=10))
     return build_response()

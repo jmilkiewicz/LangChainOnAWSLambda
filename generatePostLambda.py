@@ -5,15 +5,7 @@ from generateInstagramPost import generateInstagramPost
 
 
 def handler(event, context):
-    print(f"event is {event}")
-
-    print(f"event is {event}")
     body = json.loads(event["body"])
-
-    # TODO add/check validation
-    # validate_response = validate_inputs(body)
-    # if validate_response:
-    #     return validate_response
 
     date = body['date']
     name = body["name"]
