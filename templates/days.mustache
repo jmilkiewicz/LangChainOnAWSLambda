@@ -105,6 +105,7 @@
        </style>
 </head>
 <body>
+    {{#.length}}
     <ul>
        {{#.}}
                    <li id="event{{index}}">
@@ -119,6 +120,10 @@
                     </li>
        {{/.}}
     </ul>
+    {{/.length}}
+    {{^.length}}
+    Brak pasujących eventow
+    {{/.length}}
 
     <script>
         function sendEvent(eventDetails, chatHistoryId, spinnerId, threadIdInputId, feedbackInputId, tuneButtonId) {
