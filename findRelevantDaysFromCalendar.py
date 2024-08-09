@@ -43,13 +43,21 @@ def findRelevantDays(model, fromDate, toDate):
                 "Zawsze odpowiadasz w języku polskim. Opakuj odpowiedz in `json` tags\n{format_instructions}",
             ),
             ("human",
-             "Z załączonej poniżej listy świąt w formacie JSON chciałbym poznać wszystkie święta związane ze zdrowiem psychicznym,"
-             " depresjami, autyzmem, zaburzeniami psychicznymi, uzależnieniami, alkoholizmem, narkomanią, relacjami między ludzkimi , związkami partnerskimi,"
-             "seksualnością, dni upamiętnieniające ofiary które doznały krzywd psychicznych, "
-             "dni związane z promowaniem zdrowia psychicznego oraz wszelkimi tematami związanymi z psychologią lub rozwojem wewnętrznym. "
-             "Opieraj się tylko na poniżej przedstawionej liście świąt."
-             "List świąt jest w formacie JSON i posiada atrybut \"date\" który wskazuje na date oraz atrybut \"name\" który ma 1 lub wiele świąt które odbywają się w tym dniu. "
-             "{days}"),
+             " Z załączonej listy świąt wybierz jedynie te święta związane ze"
+             " -  zdrowiem psychicznym,"
+             " - depresjami, "
+             " - autyzmem, "
+             " - zaburzeniami psychicznymi, "
+             " - uzależnieniami, alkoholizmem, narkomanią"
+             " - relacjami między ludzkimi, związkami partnerskimi, "
+             " - seksualnością,"
+             " - dni upamiętnieniające ofiary które doznały krzywd psychicznych, "
+             " - dni związane z promowaniem zdrowia psychicznego, "
+             " - oraz tematami związanymi z psychologią lub rozwojem wewnętrznym."
+             "\n\n"
+             "Opieraj się tylko na poniżej przedstawionej liście świąt i zwróć tylko święta, które spełniają wymienione powyżej kryteria. "
+             "List świąt jest w formacie JSON i każde ze świat posiada atrybut \"date\" który wskazuje na date oraz atrybut \"name\" który ma 1 lub wiele świąt które odbywają się w tym dniu. "
+             "Dostępna lista świąt : {days}"),
         ]
     ).partial(format_instructions=parser.get_format_instructions())
 
