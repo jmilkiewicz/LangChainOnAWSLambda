@@ -29,7 +29,7 @@ def handler(event, context):
 
     model = buildLLM(key=getApiKey(), temperature=0.0)
 
-    days = findRelevantDays(model, datetime.now(), datetime.now() + timedelta(days=30))
+    days = findRelevantDays(model, datetime.now(), datetime.now() + timedelta(days=21))
 
     dicts = [{"event": relevantDay.dict()} | {"index": index} for index, relevantDay in enumerate(days)]
 
